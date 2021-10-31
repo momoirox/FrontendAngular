@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { Maps } from './maps/maps.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FirstBuildingComponent } from './first-building/first-building.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, Maps, FirstBuildingComponent],
@@ -14,6 +15,7 @@ import { FirstBuildingComponent } from './first-building/first-building.componen
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
