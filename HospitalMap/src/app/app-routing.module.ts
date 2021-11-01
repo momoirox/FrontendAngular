@@ -5,7 +5,6 @@ import { FirstBuildingComponent } from './first-building/first-building.componen
 import { FloorsComponent } from './floors/floors.component';
 import { Maps } from './maps/maps.component';
 
-
 const routes: Routes = [
   { path: 'maps', component: Maps },
   { path: 'firstBuilding', component: FirstBuildingComponent },
@@ -19,4 +18,8 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-export const routingComponents = [Maps, FirstBuildingComponent, FloorsComponent];
+export const routingComponents = [
+  Maps,
+  FirstBuildingComponent,
+  FloorsComponent,
+];
