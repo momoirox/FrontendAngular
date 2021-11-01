@@ -10,6 +10,8 @@ export class FloorsComponent implements OnInit {
 
   public isFirst = false;
   public isSecond= false;
+  public isRoomSelected = false;
+  public selectedRoom = "";
   public lista = ["Ordinacija 3", "Ordinacija 2", "Ordinacija 1", "Informacije", "Ordinacija 4",  "Stomatologija","Operaciona sala 1", "WC muski", "WC zenski", "Operaciona sala 2"];
   constructor(private router: Router) { }
 
@@ -26,6 +28,16 @@ export class FloorsComponent implements OnInit {
   secondFloor(){
     this.isFirst=false;
     this.isSecond=true;
+  }
+
+  openRoomInfo(){
+    this.isRoomSelected = true;
+    this.selectedRoom = "Ordinacija 3";
+  }
+
+  openRoomInfo2(){
+    this.isRoomSelected = true;
+    this.selectedRoom = "Ordinacija 2";
   }
 
 }
