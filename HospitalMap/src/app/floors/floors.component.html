@@ -1,105 +1,111 @@
+
 <div style="margin-left: 40px; margin-top: 40px;">
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (change)="firstFloor()" >
-      <label class="form-check-label" for="flexRadioDefault1">
-        Prvi sprat
-      </label>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (change)="firstFloor()" >
+    <label class="form-check-label" for="flexRadioDefault1">
+      Prvi sprat
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  (change)="secondFloor()" >
+    <label class="form-check-label" for="flexRadioDefault2">
+     Drugi sprat
+    </label>
+  </div>
+</div>
+<br>
+    <div class="row mx-auto">
+      <div class="col-9">
+        <svg height="500" width="1000" *ngIf="isFirst" style="border:1px solid rgb(14, 13, 13); margin-left:auto; margin-right:auto; display:block;">
+          <polygon (click)="openRoomInfo()"  points="0,0 300,0 300,140, 0,140" style="fill:pink; stroke: black; stroke-width:1px" />
+          <text  x="150" y="70" text-anchor="middle" fill="black" font-size="14">{{lista[0]}}</text>
+          <polygon points="200,136 250,136 250,140, 200,140"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+          <polygon (click)="openRoomInfo2()"  points="0,144 150,144 150,320, 0,320" style="fill:pink; stroke: black; stroke-width:1px" />
+          <text  x="75" y="232" text-anchor="middle" fill="black" font-size="14">{{lista[1]}}</text>
+          <polygon points="146,207 150,207 150,257, 146,257"  style="fill: gray; stroke: black; stroke-width:1px" />
+          
+          <polygon points="0,324 150,324 150,400, 220,400 220,500  0,500" style="fill:pink; stroke: black; stroke: width 1px;"/>
+          <text  x="75" y="412" text-anchor="middle" fill="black" font-size="14">{{lista[2]}}</text>
+          <polygon points="160,400 210,400 210,404, 160,404"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+          <polygon points="224,400 380,400 380,500, 224,500" style="fill:pink; stroke: black; stroke: width 1px;"/>
+          <text  x="302" y="450" text-anchor="middle" fill="black" font-size="14">{{lista[3]}}</text>
+          <polygon points="277,400 327,400 327,404, 277,404"  style="fill: gray; stroke: black; stroke-width:1px" />
+          
+          <polygon points="304,0 540,0 540,140, 304,140" style="fill:pink; stroke: black; stroke-width:1px" />
+          <text  x="422" y="70" text-anchor="middle" fill="black" font-size="14">{{lista[4]}}</text>
+          <polygon points="397,136 447,136 447,140, 397,140"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+          <polygon points="544,0 744,0 744,140, 544,140" style="fill:pink; stroke: black; stroke-width:1px" />
+          <text  x="644" y="70" text-anchor="middle" fill="black" font-size="14">{{lista[5]}}</text>
+          <polygon points="619,136 669,136 669,140, 619,140"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+          <polygon points="748,0 1000,0 1000,190, 870,190, 870,140 748, 140" style="fill:pink; stroke: black; stroke-width:1px" />
+          <text  x="877" y="95" text-anchor="middle" fill="black" font-size="14">{{lista[6]}}</text>
+          <polygon points="784,136 834,136 834,140, 784,140"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+          <polygon points="870,194 1000,194 1000,270, 870,270" style="fill:pink; stroke: black; stroke-width:1px" />
+          <text  x="935" y="232" text-anchor="middle" fill="black" font-size="14">{{lista[7]}}</text>
+          <polygon points="870,207 874,207 874,257, 870,257"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+          <polygon points="870,274 1000,274 1000,350, 870,350" style="fill:pink; stroke: black; stroke-width:1px" />
+          <text  x="935" y="312" text-anchor="middle" fill="black" font-size="14">{{lista[8]}}</text>
+          <polygon points="870,287 874,287 874,337, 870,337"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+          <polygon points="870,354 1000,354 1000,500, 770,500 770,400 870,400"  style="fill:pink; stroke: black; stroke-width:1px" />
+          <text  x="885" y="427" text-anchor="middle" fill="black" font-size="14">{{lista[9]}}</text>
+          <polygon points="795,400 845,400 845,404, 795,404"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+        
+        
+          <polygon points="310,200 710,200 710,340, 310,340"  style="fill:pink; " />
+          
+          <polygon points="340,222.5 365,222.5 365,247.5, 340,247.5"  style="fill: gray; " />
+          <polygon points="375,222.5 400,222.5 400,247.5, 375,247.5"  style="fill: gray; " />
+          <polygon points="410,222.5 435,222.5 435,247.5, 410,247.5"  style="fill: gray; " />
+          <polygon points="445,222.5 470,222.5 470,247.5, 445,247.5"  style="fill: gray; " />
+          <polygon points="480,222.5 505,222.5 505,247.5, 480,247.5"  style="fill: gray; " />
+          <polygon points="515,222.5 540,222.5 540,247.5, 515,247.5"  style="fill: gray; " />
+          <polygon points="550,222.5 575,222.5 575,247.5, 550,247.5"  style="fill: gray; " />
+          <polygon points="585,222.5 610,222.5 610,247.5, 585,247.5"  style="fill: gray; " />
+          <polygon points="620,222.5 645,222.5 645,247.5, 620,247.5"  style="fill: gray; " />
+          <polygon points="655,222.5 680,222.5 680,247.5, 655,247.5"  style="fill: gray; " />
+        
+          <polygon points="340,257.5 365,257.5 365,282.5, 340,282.5"  style="fill: gray; " />
+          <polygon points="375,257.5 400,257.5 400,282.5, 375,282.5"  style="fill: gray;" />
+          <polygon points="410,257.5 435,257.5 435,282.5, 410,282.5"  style="fill: gray; " />
+          <polygon points="445,257.5 470,257.5 470,282.5, 445,282.5"  style="fill: gray;" />
+          <polygon points="480,257.5 505,257.5 505,282.5, 480,282.5"  style="fill: gray; " />
+          <polygon points="515,257.5 540,257.5 540,282.5, 515,282.5"  style="fill: gray; " />
+          <polygon points="550,257.5 575,257.5 575,282.5, 550,282.5"  style="fill: gray; " />
+          <polygon points="585,257.5 610,257.5 610,282.5, 585,282.5"  style="fill: gray; " />
+          <polygon points="620,257.5 645,257.5 645,282.5, 620,282.5"  style="fill: gray; " />
+          <polygon points="655,257.5 680,257.5 680,282.5, 655,282.5"  style="fill: gray; " />
+        
+          <polygon points="340,292.5 365,292.5 365,317.5, 340,317.5"  style="fill: gray; " />
+          <polygon points="375,292.5 400,292.5 400,317.5, 375,317.5"  style="fill: gray; " />
+          <polygon points="410,292.5 435,292.5 435,317.5, 410,317.5"  style="fill: gray; " />
+          <polygon points="445,292.5 470,292.5 470,317.5, 445,317.5"  style="fill: gray;" />
+          <polygon points="480,292.5 505,292.5 505,317.5, 480,317.5"  style="fill: gray; " />
+          <polygon points="515,292.5 540,292.5 540,317.5, 515,317.5"  style="fill: gray; " />
+          <polygon points="550,292.5 575,292.5 575,317.5, 550,317.5"  style="fill: gray;" />
+          <polygon points="585,292.5 610,292.5 610,317.5, 585,317.5"  style="fill: gray; " />
+          <polygon points="620,292.5 645,292.5 645,317.5, 620,317.5"  style="fill: gray; " />
+          <polygon points="655,292.5 680,292.5 680,317.5, 655,317.5"  style="fill: gray; " />
+          
+          
+        
+          <polygon points="540,494 610,494 610,500, 540,500"  style="fill: gray; stroke: black; stroke-width:1px" />
+        
+        </svg>
+    </div> 
+    <div class="col-3" *ngIf="isFirst && isRoomSelected">
+      <app-room-info [room]="selectedRoom"></app-room-info>
     </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  (change)="secondFloor()" >
-      <label class="form-check-label" for="flexRadioDefault2">
-       Drugi sprat
-      </label>
-    </div>
-    </div>
-    <br>
-    <svg height="500" width="1000" *ngIf="isFirst" style="border:1px solid rgb(14, 13, 13); margin-left:auto; margin-right:auto; display:block;">
-      <polygon  points="0,0 300,0 300,140, 0,140" style="fill:pink; stroke: black; stroke-width:1px" />
-      <text  x="150" y="70" text-anchor="middle" fill="black" font-size="14">{{lista[0]}}</text>
-      <polygon points="200,136 250,136 250,140, 200,140"  style="fill: gray; stroke: black; stroke-width:1px" />
-    
-      <polygon  points="0,144 150,144 150,320, 0,320" style="fill:pink; stroke: black; stroke-width:1px" />
-      <text  x="75" y="232" text-anchor="middle" fill="black" font-size="14">{{lista[1]}}</text>
-      <polygon points="146,207 150,207 150,257, 146,257"  style="fill: gray; stroke: black; stroke-width:1px" />
-      
-      <polygon points="0,324 150,324 150,400, 220,400 220,500  0,500" style="fill:pink; stroke: black; stroke: width 1px;"/>
-      <text  x="75" y="412" text-anchor="middle" fill="black" font-size="14">{{lista[2]}}</text>
-      <polygon points="160,400 210,400 210,404, 160,404"  style="fill: gray; stroke: black; stroke-width:1px" />
-    
-      <polygon points="224,400 380,400 380,500, 224,500" style="fill:pink; stroke: black; stroke: width 1px;"/>
-      <text  x="302" y="450" text-anchor="middle" fill="black" font-size="14">{{lista[3]}}</text>
-      <polygon points="277,400 327,400 327,404, 277,404"  style="fill: gray; stroke: black; stroke-width:1px" />
-      
-      <polygon points="304,0 540,0 540,140, 304,140" style="fill:pink; stroke: black; stroke-width:1px" />
-      <text  x="422" y="70" text-anchor="middle" fill="black" font-size="14">{{lista[4]}}</text>
-      <polygon points="397,136 447,136 447,140, 397,140"  style="fill: gray; stroke: black; stroke-width:1px" />
-     
-      <polygon points="544,0 744,0 744,140, 544,140" style="fill:pink; stroke: black; stroke-width:1px" />
-      <text  x="644" y="70" text-anchor="middle" fill="black" font-size="14">{{lista[5]}}</text>
-      <polygon points="619,136 669,136 669,140, 619,140"  style="fill: gray; stroke: black; stroke-width:1px" />
-    
-      <polygon points="748,0 1000,0 1000,190, 870,190, 870,140 748, 140" style="fill:pink; stroke: black; stroke-width:1px" />
-      <text  x="877" y="95" text-anchor="middle" fill="black" font-size="14">{{lista[6]}}</text>
-      <polygon points="784,136 834,136 834,140, 784,140"  style="fill: gray; stroke: black; stroke-width:1px" />
-    
-      <polygon points="870,194 1000,194 1000,270, 870,270" style="fill:pink; stroke: black; stroke-width:1px" />
-      <text  x="935" y="232" text-anchor="middle" fill="black" font-size="14">{{lista[7]}}</text>
-      <polygon points="870,207 874,207 874,257, 870,257"  style="fill: gray; stroke: black; stroke-width:1px" />
-    
-      <polygon points="870,274 1000,274 1000,350, 870,350" style="fill:pink; stroke: black; stroke-width:1px" />
-      <text  x="935" y="312" text-anchor="middle" fill="black" font-size="14">{{lista[8]}}</text>
-      <polygon points="870,287 874,287 874,337, 870,337"  style="fill: gray; stroke: black; stroke-width:1px" />
-    
-      <polygon points="870,354 1000,354 1000,500, 770,500 770,400 870,400"  style="fill:pink; stroke: black; stroke-width:1px" />
-      <text  x="885" y="427" text-anchor="middle" fill="black" font-size="14">{{lista[9]}}</text>
-      <polygon points="795,400 845,400 845,404, 795,404"  style="fill: gray; stroke: black; stroke-width:1px" />
-    
-    
-    
-      <polygon points="310,200 710,200 710,340, 310,340"  style="fill:pink; " />
-      
-      <polygon points="340,222.5 365,222.5 365,247.5, 340,247.5"  style="fill: gray; " />
-      <polygon points="375,222.5 400,222.5 400,247.5, 375,247.5"  style="fill: gray; " />
-      <polygon points="410,222.5 435,222.5 435,247.5, 410,247.5"  style="fill: gray; " />
-      <polygon points="445,222.5 470,222.5 470,247.5, 445,247.5"  style="fill: gray; " />
-      <polygon points="480,222.5 505,222.5 505,247.5, 480,247.5"  style="fill: gray; " />
-      <polygon points="515,222.5 540,222.5 540,247.5, 515,247.5"  style="fill: gray; " />
-      <polygon points="550,222.5 575,222.5 575,247.5, 550,247.5"  style="fill: gray; " />
-      <polygon points="585,222.5 610,222.5 610,247.5, 585,247.5"  style="fill: gray; " />
-      <polygon points="620,222.5 645,222.5 645,247.5, 620,247.5"  style="fill: gray; " />
-      <polygon points="655,222.5 680,222.5 680,247.5, 655,247.5"  style="fill: gray; " />
-    
-      <polygon points="340,257.5 365,257.5 365,282.5, 340,282.5"  style="fill: gray; " />
-      <polygon points="375,257.5 400,257.5 400,282.5, 375,282.5"  style="fill: gray;" />
-      <polygon points="410,257.5 435,257.5 435,282.5, 410,282.5"  style="fill: gray; " />
-      <polygon points="445,257.5 470,257.5 470,282.5, 445,282.5"  style="fill: gray;" />
-      <polygon points="480,257.5 505,257.5 505,282.5, 480,282.5"  style="fill: gray; " />
-      <polygon points="515,257.5 540,257.5 540,282.5, 515,282.5"  style="fill: gray; " />
-      <polygon points="550,257.5 575,257.5 575,282.5, 550,282.5"  style="fill: gray; " />
-      <polygon points="585,257.5 610,257.5 610,282.5, 585,282.5"  style="fill: gray; " />
-      <polygon points="620,257.5 645,257.5 645,282.5, 620,282.5"  style="fill: gray; " />
-      <polygon points="655,257.5 680,257.5 680,282.5, 655,282.5"  style="fill: gray; " />
-    
-      <polygon points="340,292.5 365,292.5 365,317.5, 340,317.5"  style="fill: gray; " />
-      <polygon points="375,292.5 400,292.5 400,317.5, 375,317.5"  style="fill: gray; " />
-      <polygon points="410,292.5 435,292.5 435,317.5, 410,317.5"  style="fill: gray; " />
-      <polygon points="445,292.5 470,292.5 470,317.5, 445,317.5"  style="fill: gray;" />
-      <polygon points="480,292.5 505,292.5 505,317.5, 480,317.5"  style="fill: gray; " />
-      <polygon points="515,292.5 540,292.5 540,317.5, 515,317.5"  style="fill: gray; " />
-      <polygon points="550,292.5 575,292.5 575,317.5, 550,317.5"  style="fill: gray;" />
-      <polygon points="585,292.5 610,292.5 610,317.5, 585,317.5"  style="fill: gray; " />
-      <polygon points="620,292.5 645,292.5 645,317.5, 620,317.5"  style="fill: gray; " />
-      <polygon points="655,292.5 680,292.5 680,317.5, 655,317.5"  style="fill: gray; " />
-      
-      
-    
-      <polygon points="540,494 610,494 610,500, 540,500"  style="fill: gray; stroke: black; stroke-width:1px" />
-    
-    </svg> 
-    
-    
+  </div>
     <svg height="500" width="1000" *ngIf="isSecond" style="border:1px solid rgb(14, 13, 13); margin-left:auto; margin-right:auto; display:block;">
      
     </svg>
-    
+  
     

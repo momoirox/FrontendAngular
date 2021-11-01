@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-first-comp',
+  selector: 'app-maps',
   templateUrl: './maps.component.html',
   styleUrls: ['./maps.component.css'],
 })
@@ -20,6 +20,6 @@ export class Maps implements OnInit {
     this.status = !this.status;
   }
   clickEvent() {
-    this.router.navigateByUrl('maps');
+    this.router.navigateByUrl('floor');
   }
 }
