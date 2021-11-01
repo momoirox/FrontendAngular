@@ -9,9 +9,11 @@ import { FirstBuildingComponent } from './first-building/first-building.componen
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FloorsComponent } from './floors/floors.component';
 import { RoomInfoComponent } from './room-info/room-info.component';
+import { CommentsManagerComponent } from './comments-manager/comments-manager.component';
+import { StarComponent } from './shared/star.component';
 
 @NgModule({
-  declarations: [AppComponent, Maps, FirstBuildingComponent, FloorsComponent, RoomInfoComponent],
+  declarations: [AppComponent, Maps, FirstBuildingComponent, FloorsComponent, RoomInfoComponent, CommentsManagerComponent,StarComponent],
   imports: [
     BrowserModule,
     BrowserModule,
