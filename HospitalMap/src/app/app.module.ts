@@ -7,9 +7,10 @@ import { Maps } from './maps/maps.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FirstBuildingComponent } from './first-building/first-building.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FloorsComponent } from './floors/floors.component';
 
 @NgModule({
-  declarations: [AppComponent, Maps, FirstBuildingComponent],
+  declarations: [AppComponent, Maps, FirstBuildingComponent, FloorsComponent],
   imports: [
     BrowserModule,
     BrowserModule,

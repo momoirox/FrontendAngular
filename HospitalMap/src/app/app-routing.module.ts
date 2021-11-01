@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { FirstBuildingComponent } from './first-building/first-building.component';
 import { Maps } from './maps/maps.component';
 
+
 const routes: Routes = [
   { path: 'maps', component: Maps },
   { path: 'firstBuilding', component: FirstBuildingComponent },
+ 
 ];
 
 @NgModule({
