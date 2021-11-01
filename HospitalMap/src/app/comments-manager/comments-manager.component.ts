@@ -12,7 +12,7 @@ export class CommentsManagerComponent implements OnInit {
     this.allComments = [{
       userId: "asjhdk",
       userName: "Jelna Stajic",
-      rating: 4,
+      rating: 5,
       userComment: "Prvi komentar",
       imageUrl: '',
       dateInMiliseconds: 238293823,

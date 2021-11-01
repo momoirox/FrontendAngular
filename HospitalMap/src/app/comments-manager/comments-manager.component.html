@@ -1,41 +1,28 @@
-<div class="container" *ngFor='let comment of allComments'>
-    <star-component></star-component>
-    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Best Health Care</strong>
-    </p>
+<div class="container" style="border-radius: 5rem; background-color: rgb(182, 209, 226);" >
+  <div class='container' style="background-color: whitesmoke; border-radius: 5rem;">
+    <router-outlet></router-outlet>
+    <section class="section-padding pb-0" id="reviews">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center mb-lg-2 mb-2">Our Patients Reviews</h2>
+            <div *ngFor='let comment of allComments'>
+              <figure class="reviews-thumb d-flex flex-wrap align-items-center rounded" style="background-color:rgb(182, 209, 226);" >
+                <star-rating [rating]='comment.rating'></star-rating>
+                <p class="reviews-text w-100">{{comment.userComment}}</p>
+                <figcaption class="ms-4">
+                  <strong>{{comment.userName}}</strong>
 
-    <p class="reviews-text w-100">{{comment.userComment}}</p>
+                  <span class="text-muted"> Patient</span>
+                </figcaption>
 
-    <figcaption class="ms-4">
-        <strong>{{comment.userName}}</strong>
-
-        <span class="text-muted"> Patient</span>
-    </figcaption>
-</div>
-
-
-<div class=" container list-group">
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">List group item heading</h5>
-        <small>3 days ago</small>
+              </figure>
+              <br>
+            </div>
+            <br><br>
+          </div>
+        </div>
       </div>
-      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-      <small>Donec id elit non mi porta.</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">List group item heading</h5>
-        <small class="text-muted">3 days ago</small>
-      </div>
-      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-      <small class="text-muted">Donec id elit non mi porta.</small>
-    </a>
-    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">List group item heading</h5>
-        <small class="text-muted">3 days ago</small>
-      </div>
-      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-      <small class="text-muted">Donec id elit non mi porta.</small>
-    </a>
+    </section>
   </div>
+</div>
