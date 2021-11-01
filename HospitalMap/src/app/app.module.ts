@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FirstBuildingComponent } from './first-building/first-building.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FloorsComponent } from './floors/floors.component';
+import { RoomInfoComponent } from './room-info/room-info.component';
 
 @NgModule({
-  declarations: [AppComponent, Maps, FirstBuildingComponent, FloorsComponent],
+  declarations: [AppComponent, Maps, FirstBuildingComponent, FloorsComponent, RoomInfoComponent],
   imports: [
     BrowserModule,
     BrowserModule,
