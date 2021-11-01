@@ -1,0 +1,13 @@
+<div *ngFor='let comment of userComments'>
+    <app-star-rating></app-star-rating>
+    <p class="text-primary d-block mt-2 mb-0 w-100"><strong>Best Health Care</strong>
+    </p>
+
+    <p class="reviews-text w-100">{{comment.userComment}}</p>
+
+    <figcaption class="ms-4">
+        <strong>{{comment.userName}}</strong>
+
+        <span class="text-muted"> Patient</span>
+    </figcaption>
+</div>

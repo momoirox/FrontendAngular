@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
+import { PatientCommentComponent } from './patient-comment/patient-comment.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    PatientCommentComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,
