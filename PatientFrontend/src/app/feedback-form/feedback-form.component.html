@@ -1,11 +1,28 @@
-<div style="background-color: blueviolet;" id="modal-content-wrapper">
-    <header id="modal-header">
-        <h1 id="modal-title">Are you sure you want to logout?</h1>
-    </header>
-    <section id="modal-body">
-        <p>If you logout bad things might happen, but don't mind me, I'm just the description in a modal...</p>
-    </section>
-    <footer id="modal-footer">
-        <button mat-raised-button mat-dialog-close>Logout</button>
-    </footer>
+<div class="col-12 text-center">
+    <h4>Your opinion matters</h4>
+    <hr>
+</div>
+<div class="col-12">
+    <form>
+        <div class="form-group">
+          <label>Your rating</label>
+          <app-star-rating></app-star-rating>        
+        </div>
+        <div class="form-group">
+          <label>What could we improve?</label>
+          <textarea  class="form-control" type="textarea"  rows="3" placeholder="Your suggestions..."></textarea>
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox">Remain anonymous
+          </label>
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox">Publish feedback
+            </label>
+          </div>
+          <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>    
 </div>

@@ -12,5 +12,8 @@ export class FeedbackFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onRatingClicked(message: string) : void{
+    alert('clicked ' + message);
+  }
 
 }

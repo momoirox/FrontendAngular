@@ -19,8 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HomePageComponent,
     PatientCommentComponent,
-    StarRatingComponent,
-    FeedbackFormComponent
+    FeedbackFormComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,

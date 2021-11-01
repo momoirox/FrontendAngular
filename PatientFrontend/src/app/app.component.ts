@@ -14,10 +14,10 @@ export class AppComponent {
 
   openModal(){
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = false;
     dialogConfig.id = "modal-component";
-    dialogConfig.height = "350px";
-    dialogConfig.width = "600px";
+    //dialogConfig.height = "350px";
+    //dialogConfig.width = "600px";
     this.matDialog.open(FeedbackFormComponent, dialogConfig);
     // {position: {top: '0%', left: '20%'}}
   }
