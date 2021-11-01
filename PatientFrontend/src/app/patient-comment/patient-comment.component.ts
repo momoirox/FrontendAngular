@@ -15,14 +15,21 @@ export class PatientCommentComponent implements OnInit {
       'userId': 1,
       'rating': 4,
       'userComment': "Phasellus ligula ante, tempus ac imperdiet ut, mattisac nibh. Orcivarius natoque penatibus et magnis dis parturient montes, nascetur ridiculusmus.",
-      'userName': 'Monika Bleuci',
+      'userName': 'Virginia Woolf',
       'imageUrl': ''
     },
     {
       'userId': 2,
       'rating': 1,
       'userComment': "Phasellus ligula ante, tempus ac imperdiet ut, mattisac nibh. Orcivarius natoque penatibus et magnis dis parturient montes, nascetur ridiculusmus.",
-      'userName': 'Selma Hayek',
+      'userName': 'Charles Bukowski',
+      'imageUrl': ''
+    },
+    {
+      'userId': 3,
+      'rating': 4.5,
+      'userComment': "Phasellus ligula ante, tempus ac imperdiet ut, mattisac nibh. Orcivarius natoque penatibus et magnis dis parturient montes, nascetur ridiculusmus.",
+      'userName': 'J. R. R. Tolkien ',
       'imageUrl': ''
     }
 
