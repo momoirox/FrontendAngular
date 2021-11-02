@@ -8,6 +8,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { PatientCommentComponent } from './patient-comment/patient-comment.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FeedbackFormComponent } from './feedback-form/feedback-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -15,6 +19,7 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
     AppComponent,
     HomePageComponent,
     PatientCommentComponent,
+    FeedbackFormComponent,
     StarRatingComponent
   ],
   imports: [
@@ -23,9 +28,13 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
     RouterModule.forRoot([
       { path: 'home', component: HomePageComponent }]
     ),
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [FeedbackFormComponent]
 })
 export class AppModule { }
