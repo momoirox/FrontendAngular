@@ -5,12 +5,13 @@ export enum CommentState {
   }
 
 export interface IComment {
+    commentId: string;
     userId: string;
     userName: string;
     rating: number;
     userComment: string;
     imageUrl: string;
-    dateInMiliseconds: number;
+    dateOfPosting: Date;
     commentState: CommentState;
         
 }
