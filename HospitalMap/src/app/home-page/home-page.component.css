@@ -1,0 +1,15 @@
+img {
+    height: 500px;
+    width: 1200px;
+    border-radius: 10%;
+
+}
+
+.heroText{
+   
+    width: 600px;
+    margin-right: 12px;
+    border-bottom-right-radius: 10%;
+    border-top-left-radius: 10px;
+    
+}

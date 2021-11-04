@@ -4,12 +4,15 @@ import { CommentsManagerComponent } from './comments-manager/comments-manager.co
 import { FirstBuildingComponent } from './first-building/first-building.component';
 import { FloorsComponent } from './floors/floors.component';
 import { Maps } from './maps/maps.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 const routes: Routes = [
   { path: 'maps', component: Maps },
   { path: 'firstBuilding', component: FirstBuildingComponent },
   {path: 'floor', component: FloorsComponent},
   {path: 'comments', component: CommentsManagerComponent},
+  {path: 'home', component: HomePageComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'}
  
 ];
 

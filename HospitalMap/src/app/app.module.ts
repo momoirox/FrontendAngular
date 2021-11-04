@@ -11,9 +11,10 @@ import { FloorsComponent } from './floors/floors.component';
 import { RoomInfoComponent } from './room-info/room-info.component';
 import { CommentsManagerComponent } from './comments-manager/comments-manager.component';
 import { StarComponent } from './shared/star.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
-  declarations: [AppComponent, Maps, FirstBuildingComponent, FloorsComponent, RoomInfoComponent, CommentsManagerComponent,StarComponent],
+  declarations: [AppComponent, Maps, FirstBuildingComponent, FloorsComponent, RoomInfoComponent, CommentsManagerComponent,StarComponent, HomePageComponent],
   imports: [
     BrowserModule,
     BrowserModule,

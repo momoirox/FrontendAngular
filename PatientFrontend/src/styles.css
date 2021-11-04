@@ -1,7 +1,10 @@
 
-body{
+/*body{
     background-image: url('assets/images/v870-tang-36.jpg');
 
     background-repeat: no-repeat;
     background-size: cover; 
-}
+}*/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
