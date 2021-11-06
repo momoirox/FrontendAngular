@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IComment, CommentState } from '../interfaces/comment';
+import { Subscription, Observable } from 'rxjs';
+
+import { IFeedback, FeedbackStatus } from '../interfaces/feedback';
 import { CommentsManagerService } from '../services/commentServices/comments-manager.service';
 
 @Component({
@@ -9,26 +11,29 @@ import { CommentsManagerService } from '../services/commentServices/comments-man
   providers: [CommentsManagerService]
 })
 export class CommentsManagerComponent implements OnInit {
-  allComments: IComment[] = [];
-  waiting: IComment[] = [];
-  approved: IComment[] = [];
+ // allComments: Observable<IComment> = new Observable<IComment>();
+  // allComments: Observable<IComment> = new Observable<IComment>();
+  allComments!: IFeedback[];
+  waiting!: IFeedback[];
+  approved: IFeedback[] = [];
+  sub! : Subscription;
   constructor(private _commentsService: CommentsManagerService) {
 
   }
 
   ngOnInit(): void {
-    this.allComments = this._commentsService.getAllComments();
-    for (let c of this.allComments) {
-      if (c.commentState == CommentState.pending) {
-        this.waiting.push(c);
-      } else {
-        if (c.commentState == CommentState.approved) {
-          this.approved.push(c);
-        }
-      }
-    }
+    
+    this.allComments = [];
+    this.sub = this._commentsService.getFeedback().subscribe({
+      next:  com => {this.allComments = com;}
+     
+    });
+    
+    console.log('All: ', JSON.stringify(this.allComments))
+    console.log(this.allComments.length);
+    
   }
-
+/*
   approveComment(id: string) {
 
     for (let c of this.allComments) {
@@ -57,7 +62,7 @@ export class CommentsManagerComponent implements OnInit {
       }
     }
   }
-
+*/
 }
 
 

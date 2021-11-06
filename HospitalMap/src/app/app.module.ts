@@ -12,6 +12,11 @@ import { RoomInfoComponent } from './room-info/room-info.component';
 import { CommentsManagerComponent } from './comments-manager/comments-manager.component';
 import { StarComponent } from './shared/star.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from  '@angular/common/http';
+import { Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
+
 
 @NgModule({
   declarations: [AppComponent, Maps, FirstBuildingComponent, FloorsComponent, RoomInfoComponent, CommentsManagerComponent,StarComponent, HomePageComponent],
@@ -21,6 +26,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
